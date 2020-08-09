@@ -1,4 +1,4 @@
-﻿var speed_time = 240000; //240000;
+var speed_time = 240000; //240000;
 var work_status = false;
 function game_reset() {
 	start_bet = +$('.TextField-module-itemInputWrapper-ErE').children('[data-test="deal-amount-input"]')[0].value.replace(/ /g, ''); // Размер ставки.
@@ -426,11 +426,13 @@ function onStop() {
 	setTimeout(resetUI, 1000);
 }
 
-//console.log(speed_time);
-check_bets_activity = setInterval(history_distance, speed_time);
-//bet_end_check_timer = setInterval(bet_end_check, speed_time);
-setTimeout(init, 2000);
+function first_init() {
+	//console.log(speed_time);
+	check_bets_activity = setInterval(history_distance, speed_time);
+	//bet_end_check_timer = setInterval(bet_end_check, speed_time);
+	setTimeout(init, 2000);
 
-var jq = document.createElement('script');
-jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js";
-document.getElementsByTagName('head')[0].appendChild(jq);
+	var jq = document.createElement('script');
+	jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js";
+	document.getElementsByTagName('head')[0].appendChild(jq);
+}
